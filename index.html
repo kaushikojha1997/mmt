@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MakeMyTrip</title>
+	<script src="lib/angular.js"></script>
+	<script src="app.module.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/response.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/searched.css">
+</head>
+<body ng-app="app" ng-controller="appCtrl">
+
+	<header class=" header">
+		<ul class="row"> 
+			<li class="col-xs-2	">
+				<a href=""><img id="logo" src="images/logo.png"></a>
+			</li>
+			<span class=" right flex">
+				<!-- <li>Flight</li>
+				<li>Hotel</li> -->
+				<li><a href="login.html"><span class="btn">Login</span></a></li>
+			</span>
+		</ul>
+	</header>
+
+	<section class="main bg">
+		<div class="main-container">
+				<div class=" row tabs">
+					<div ng-click="changeSearchFor('flight')" class="col-s-6 tab-flight ">Flight</div>
+					<div ng-click="changeSearchFor('hotel')" class="col-s-6 tab-hotel">Hotel</div>
+				</div>
+				<div ng-switch on="searchFor" class="tabs-container">
+					<!-- flight container start -->
+					<div ng-switch-when="flight" class=" row flight-container">
+
+						<div class="col-xs-12">Search Flight</div>
+						<div class="col-2 col-s-6">
+							From:<br>
+							<select ng-model="flight.source">
+								<option ng-repeat="city in cities">{{city}}</option>
+							</select>
+						</div>
+
+						<div class="col-2 col-s-6">
+							To:<br>
+							<select ng-model="flight.destination">
+								<option ng-repeat="city in cities">{{city}}</option>
+							</select>
+						</div>
+
+						<div class="col-2 col-s-6">
+							Depart:<br>
+							<input ng-model="flight.departDate" type="date" name="">
+						</div>
+
+						<!-- <div class="col-2 col-s-6">
+							Return:<br>
+							<input ng-model="flight.returnDate" type="date" name="">
+						</div> -->
+
+						<div class="col-2 col-s-6">
+							Passengers<br>
+							<input ng-model="flight.passengers" type="number" name="">
+						</div>
+						<div class="col-2 col-s-6">
+							<!-- flight.returnDate -->
+							<input ng-click="searchFlight(flight.source,flight.destination,flight.departDate,flight.passengers)" class="btn" type="submit" name="" value="Search">
+						</div>
+						
+					</div>
+					<!-- flight container end -->
+					<!-- hotel container start -->
+					<div ng-switch-when="hotel" class=" row hotel-container">
+						
+						<div class="col-xs-12">Search Hotels</div>
+
+						<div class="col-2 col-s-6">
+							City/Area:
+							<select ng-model="hotel.city">
+								<option ng-repeat="city in cities">{{city}}</option>
+							</select>
+						</div>
+
+
+						<div class="col-2 col-s-6">
+							Check in:
+							<input ng-model="hotel.checkin" type="date" name="">
+						</div>
+
+						<div class="col-2 col-s-6">
+							Check Out:
+							<input ng-model="hotel.checkout" type="date" name="">
+						</div>
+
+						<div class="col-2 col-s-6">
+							Guest
+							<input ng-model="hotel.guests" type="number" name="">
+						</div>
+						<div class="col-2 col-s-6">
+							
+							<input ng-click="searchHotel(hotel.city,hotel.checkin,hotel.checkout,hotel.guests)" class="btn" type="submit" name="" value="Search">
+						</div>
+						
+					</div>
+				</div>
+			
+		</div>
+	</section>
+
+	<section ng-show="searchedFlight  && searchFor=='flight'" class=" searched searchedFlight">
+		<h1>Available Flight</h1>
+
+		<div ng-repeat="flight in searchedFlight" class="detailWrapper">
+			<div >
+				Flight Name: <br> {{flight.name}}
+			</div>
+			<div >
+				Flight Source: <br> {{flight.source}}
+			</div>
+			<div >
+				Flight Destination: <br> {{flight.destination}}
+			</div>
+			<div >
+				Flight Departure: <br> {{flight.departure}}
+			</div>
+			<div >
+				Flight Arrival: <br> {{flight.arrival}}
+			</div>
+			<div >
+				Seats Available: <br> {{flight.seats}}
+			</div>
+			<div>Price: <br> Rs {{flight.price}}
+			</div>
+			<div>
+				<input ng-click="bookFlight(flight.id)" class="btn" type="submit" name="" value="book">
+			</div>
+		</div>
+
+		
+	</section>
+
+	<section ng-show="searchedHotel && searchFor=='hotel'" class=" searched searchedHotel">
+		<h1>Available Hotels</h1>
+		<div ng-repeat="hotel in searchedHotel" class="detailWrapper">
+			<div>
+				Hotel Name: <br> {{hotel.name}}
+			</div>
+			<div >
+				City: <br> {{hotel.city}}
+			</div>
+			<div >
+				Guest per Room: <br> {{hotel.gpr}}
+			</div>
+			
+			<div>Price: <br> Rs {{hotel.price}}
+			</div>
+			<div>
+				<input ng-click="bookHotel(hotel.id)" class="btn" type="submit" name="" value="book">
+			</div>
+		</div>
+
+		
+	</section>
+
+</body>
+</html>

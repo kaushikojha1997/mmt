@@ -1,0 +1,175 @@
+{
+  "flight": [
+    {
+      "id": 0,
+      "name": "AI087",
+      "source": "Delhi",
+      "destination": "Bhubaneswar",
+      "departure": "15 Nov 2018",
+      "arrival": "15 Nov 2018",
+      "seats": 50,
+      "passengers": 0,
+      "price": 4399
+    },
+    {
+      "id": 1,
+      "name": "V087",
+      "source": "Bangalore",
+      "destination": "Bhubaneswar",
+      "departure": "14 Nov 2018",
+      "arrival": "14 Nov 2018",
+      "seats": 50,
+      "passengers": 0,
+      "price": 9579
+    },
+    {
+      "id": 2,
+      "name": "SJ087",
+      "source": "Delhi",
+      "destination": "Bangalore",
+      "departure": "18 Nov 2018",
+      "arrival": "18 Nov 2018",
+      "seats": 50,
+      "passengers": 0,
+      "price": 3599
+    },
+    {
+      "id": 3,
+      "name": "AI087",
+      "source": "Bhubaneswar",
+      "destination": "Delhi",
+      "departure": "15 Nov 2018",
+      "arrival": "15 Nov 2018",
+      "seats": 50,
+      "passengers": 0,
+      "price": 3799
+    },
+    {
+      "id": 4,
+      "name": "AI088",
+      "source": "Bhubaneswar",
+      "destination": "Delhi",
+      "departure": "15 Nov 2018",
+      "arrival": "15 Nov 2018",
+      "seats": 50,
+      "passengers": 0,
+      "price": 5799
+    }
+  ],
+  "cities": [
+    "Delhi",
+    "Bangalore",
+    "Bhubaneswar"
+  ],
+  "hotels": [
+    {
+      "id": 0,
+      "name": "Hotel A",
+      "price": 1599,
+      "city": "Delhi",
+      "gpr": 2
+    },
+    {
+      "id": 1,
+      "name": "Hotel B",
+      "price": 1599,
+      "city": "Delhi",
+      "gpr": 3
+    },
+    {
+      "id": 2,
+      "name": "Hotel C",
+      "price": 1599,
+      "city": "Bhubaneswar",
+      "gpr": 2
+    },
+    {
+      "id": 3,
+      "name": "Hotel D",
+      "price": 1599,
+      "city": "Bhubaneswar",
+      "gpr": 3
+    },
+    {
+      "id": 4,
+      "name": "Hotel E",
+      "price": 1599,
+      "city": "Bangalore",
+      "gpr": 2
+    },
+    {
+      "id": 5,
+      "name": "Hotel F",
+      "price": 1599,
+      "city": "Bangalore",
+      "gpr": 3
+    }
+  ],
+  "bookingFlight": [
+    {
+      "source": "Bhubaneswar",
+      "destination": "Delhi",
+      "departure": "2018-09-14T18:30:00.000Z",
+      "passengers": 2,
+      "id": 4
+    },
+    {
+      "source": "Bhubaneswar",
+      "destination": "Delhi",
+      "departure": "2018-09-14T18:30:00.000Z",
+      "passengers": 3,
+      "fid": 3,
+      "id": 5
+    },
+    {
+      "source": "Bhubaneswar",
+      "destination": "Delhi",
+      "departure": "2018-09-14T18:30:00.000Z",
+      "passengers": 1,
+      "fid": 3,
+      "id": 6
+    },
+    {
+      "source": "Bhubaneswar",
+      "destination": "Delhi",
+      "departure": "2018-09-14T18:30:00.000Z",
+      "passengers": 2,
+      "fid": 4,
+      "id": 7
+    },
+    {
+      "source": "Delhi",
+      "destination": "Bangalore",
+      "departure": "2018-11-14T18:30:00.000Z",
+      "passengers": 2,
+      "fid": 2,
+      "id": 8
+    }
+  ],
+  "bookingHotel": [
+    {
+      "city": "Bangalore",
+      "checkin": "2018-09-21T18:30:00.000Z",
+      "checkout": "2018-09-22T18:30:00.000Z",
+      "guests": 2,
+      "hid": 5,
+      "id": 1
+    },
+    {
+      "city": "Bangalore",
+      "checkin": "2018-09-21T18:30:00.000Z",
+      "checkout": "2018-09-22T18:30:00.000Z",
+      "guests": 2,
+      "hid": 4,
+      "id": 2
+    },
+    {
+      "city": "Bhubaneswar",
+      "checkin": "2018-11-14T18:30:00.000Z",
+      "checkout": "2018-11-15T18:30:00.000Z",
+      "guests": 3,
+      "hid": 3,
+      "id": 3
+    }
+  ]
+}

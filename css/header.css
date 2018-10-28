@@ -1,0 +1,96 @@
+header{
+	box-shadow: 0px 4px 5px #bbcef9;
+	position: fixed;
+	background: #fff;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.header ul{
+	list-style: none;
+	margin-bottom: 0;
+}
+.header li{
+	display: inline-block;
+	margin: 0 1.2rem;
+	font-size: 1.2em;
+	font-weight: 600;
+}
+#logo{
+	width: 80%;
+	margin: 0;
+}
+.right{
+	float: right;
+}
+.header .flex{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.btn{
+	padding:0.5rem 0.8rem;
+	background: #cc3333;
+	border-radius: 5px;
+	color: #fff;
+}
+.main{
+	width: 100%;
+	position: relative;
+}
+.bg{
+	background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+.main-container{
+	width: 90%;
+	margin: 0 auto;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/*background: #fff;*/
+	height: 200px;
+}
+.tabs{
+	/*background: rgba(53, 65, 84,0.4);*/
+	color: #fff;
+	text-align: center;
+}
+.tabs div{
+	padding: 1.2rem;
+	color: #fff;
+	font-size: 1.5rem;
+	font-variant: small-caps; 
+
+}
+
+.tab-flight,.flight-container{
+	background:#380c0c;
+	padding: 2rem 2.5rem;
+
+
+}
+.tab-hotel,.hotel-container{
+	background:#0c2438;
+	padding: 2rem 2.5rem;
+
+}
+.tabs-container{
+	color: #fff;
+	text-align: center;
+	margin-top:0.5rem;
+	font-size: 1.2rem;
+	width: 100%;
+}
+
+.tabs-container input{
+width: 90%;
+outline: none;
+}
+
